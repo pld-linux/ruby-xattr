@@ -19,10 +19,8 @@ Requires:	ruby
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Extended Attributes module for Ruby.
-
-%description -l pl
-Modu³ Extended Attributes dla Ruby.
+ruby-xattr is an extension to access the xfs-compatible extended attribute
+system calls.
 
 %prep
 %setup -q
