@@ -48,4 +48,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc rdoc
 %{ruby_archdir}/*
-%{ruby_ridir}/File/*
+%{ruby_ridir}/File/get*
+%{ruby_ridir}/File/list*
+%{ruby_ridir}/File/remove*
+%{ruby_ridir}/File/set*
