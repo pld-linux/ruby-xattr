@@ -12,15 +12,20 @@ Group:		Development/Languages
 Source0:	http://www.theinternetco.net/projects/ruby/%{name}-%{version}.tar.gz
 # Source0-md5:	a47d8f164d6c9d88f54f853d2bd7d50a
 URL:	http://www.theinternetco.net/projects/ruby/ruby-xattr
+BuildRequires:	attr-devel
 BuildRequires:	ruby
 BuildRequires:	ruby-devel
-BuildRequires:	attr-devel
 Requires:	ruby
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-ruby-xattr is an extension to access the xfs-compatible extended attribute
-system calls.
+ruby-xattr is an extension to access the XFS-compatible extended
+attribute system calls.
+
+%description -l pl
+ruby-xattr to rozszerzenie pozwalaj±ce na dostêp do wywo³añ
+systemowych zwi±zanych z rozszerzonymi atrybutami kompatybilnymi z
+systemem plików XFS.
 
 %prep
 %setup -q
