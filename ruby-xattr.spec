@@ -1,7 +1,3 @@
-%define	ruby_rubylibdir	%(ruby -r rbconfig -e 'print Config::CONFIG["rubylibdir"]')
-%define	ruby_archdir	%(ruby -r rbconfig -e 'print Config::CONFIG["archdir"]')
-%define	ruby_ridir	%(ruby -r rbconfig -e 'include Config; print File.join(CONFIG["datadir"], "ri", CONFIG["ruby_version"], "system")')
-%define	ruby_version	%(ruby -r rbconfig -e 'print Config::CONFIG["ruby_version"]')
 Summary:	Extended Attributes module for Ruby
 Summary(pl):	Modu³ Extended Attributes dla Ruby
 Name:		ruby-xattr
@@ -11,8 +7,9 @@ License:	Ruby License
 Group:		Development/Languages
 Source0:	http://www.theinternetco.net/projects/ruby/%{name}-%{version}.tar.gz
 # Source0-md5:	a47d8f164d6c9d88f54f853d2bd7d50a
-URL:	http://www.theinternetco.net/projects/ruby/ruby-xattr
+URL:		http://www.theinternetco.net/projects/ruby/ruby-xattr
 BuildRequires:	attr-devel
+BuildRequires:	rpmbuild(macros) >= 1.263
 BuildRequires:	ruby
 BuildRequires:	ruby-devel
 Requires:	ruby
