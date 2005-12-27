@@ -10,7 +10,6 @@ Source0:	http://www.theinternetco.net/projects/ruby/%{name}-%{version}.tar.gz
 URL:		http://www.theinternetco.net/projects/ruby/ruby-xattr
 BuildRequires:	attr-devel
 BuildRequires:	rpmbuild(macros) >= 1.263
-BuildRequires:	ruby-modules
 BuildRequires:	ruby-devel
 Requires:	ruby-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
