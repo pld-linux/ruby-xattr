@@ -2,7 +2,7 @@ Summary:	Extended Attributes module for Ruby
 Summary(pl):	Modu³ Extended Attributes dla Ruby
 Name:		ruby-xattr
 Version:	0.3.0
-Release:	1
+Release:	2
 License:	Ruby License
 Group:		Development/Languages
 Source0:	http://www.theinternetco.net/projects/ruby/%{name}-%{version}.tar.gz
@@ -10,9 +10,9 @@ Source0:	http://www.theinternetco.net/projects/ruby/%{name}-%{version}.tar.gz
 URL:		http://www.theinternetco.net/projects/ruby/ruby-xattr
 BuildRequires:	attr-devel
 BuildRequires:	rpmbuild(macros) >= 1.263
-BuildRequires:	ruby
+BuildRequires:	ruby-modules
 BuildRequires:	ruby-devel
-Requires:	ruby
+Requires:	ruby-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
