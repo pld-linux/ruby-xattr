@@ -9,9 +9,9 @@ Source0:	http://www.theinternetco.net/projects/ruby/%{name}-%{version}.tar.gz
 # Source0-md5:	a47d8f164d6c9d88f54f853d2bd7d50a
 URL:		http://www.theinternetco.net/projects/ruby/ruby-xattr
 BuildRequires:	attr-devel
-BuildRequires:	rpmbuild(macros) >= 1.263
+BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-devel
-Requires:	ruby-modules
+%ruby_mod_ver_requires_eq
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
