@@ -1,5 +1,5 @@
 Summary:	Extended Attributes module for Ruby
-Summary(pl):	Modu³ Extended Attributes dla Ruby
+Summary(pl.UTF-8):   ModuÅ‚ Extended Attributes dla Ruby
 Name:		ruby-xattr
 Version:	0.3.0
 Release:	2
@@ -18,10 +18,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 ruby-xattr is an extension to access the XFS-compatible extended
 attribute system calls.
 
-%description -l pl
-ruby-xattr to rozszerzenie pozwalaj±ce na dostêp do wywo³añ
-systemowych zwi±zanych z rozszerzonymi atrybutami kompatybilnymi z
-systemem plików XFS.
+%description -l pl.UTF-8
+ruby-xattr to rozszerzenie pozwalajÄ…ce na dostÄ™p do wywoÅ‚aÅ„
+systemowych zwiÄ…zanych z rozszerzonymi atrybutami kompatybilnymi z
+systemem plikÃ³w XFS.
 
 %prep
 %setup -q
