@@ -1,5 +1,5 @@
 Summary:	Extended Attributes module for Ruby
-Summary(pl.UTF-8):   Moduł Extended Attributes dla Ruby
+Summary(pl.UTF-8):	Moduł Extended Attributes dla Ruby
 Name:		ruby-xattr
 Version:	0.3.0
 Release:	2
