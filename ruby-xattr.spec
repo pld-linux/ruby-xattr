@@ -7,6 +7,7 @@ License:	Ruby License
 Group:		Development/Languages
 Source0:	http://www.theinternetco.net/projects/ruby/%{name}-%{version}.tar.gz
 # Source0-md5:	a47d8f164d6c9d88f54f853d2bd7d50a
+Patch0:	%{name}-1.9.patch
 URL:		http://www.theinternetco.net/projects/ruby/ruby-xattr
 BuildRequires:	attr-devel
 BuildRequires:	rpmbuild(macros) >= 1.277
@@ -25,6 +26,7 @@ systemem plików XFS.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 ruby extconf.rb

@@ -1,0 +1,67 @@
+diff -ur ruby-xattr-0.3.0-o//ext/xattr.c ruby-xattr-0.3.0/ext/xattr.c
+--- ruby-xattr-0.3.0-o//ext/xattr.c	2004-04-19 00:05:11.000000000 -0600
++++ ruby-xattr-0.3.0/ext/xattr.c	2010-09-10 22:34:20.000000000 -0600
+@@ -67,7 +67,7 @@
+ 	int lret;
+ 	int beg, end;
+ 	VALUE retval;
+-	OpenFile *fptr;
++	rb_io_t *fptr;
+ 	FILE *f;
+ 
+ 	GetOpenFile(fobj, fptr);
+@@ -189,7 +189,7 @@
+ 	int lret, gret;
+ 	int beg, end;
+ 	VALUE retval;
+-	OpenFile *fptr;
++	rb_io_t *fptr;
+ 	FILE *f;
+ 
+ 	GetOpenFile(fobj, fptr);
+@@ -302,7 +302,7 @@
+ 	int *size;
+ 	int ret;
+ 	VALUE retval;
+-	OpenFile *fptr;
++	rb_io_t *fptr;
+ 	FILE *f;
+ 
+ 	GetOpenFile(fobj, fptr);
+@@ -352,7 +352,7 @@
+ 	Check_Type(aval, T_STRING);
+ 
+ 	ret = attr_set(StringValueCStr(fname), StringValueCStr(aname), 
+-			StringValueCStr(aval), RSTRING(aval)->len, 1);
++			StringValueCStr(aval), RSTRING_LEN(aval), 1);
+ 	if(ret == 0) {
+ 		return aval;
+ 	} else {
+@@ -374,7 +374,7 @@
+ 	  VALUE fobj, aname, aval;
+ {
+ 	int ret;
+-	OpenFile *fptr;
++	rb_io_t *fptr;
+ 	FILE *f;
+ 
+ 	GetOpenFile(fobj, fptr);
+@@ -384,7 +384,7 @@
+ 	Check_Type(aname, T_STRING);
+ 	Check_Type(aval, T_STRING);
+ 	ret = attr_setf(fileno(f), StringValueCStr(aname), 
+-			StringValueCStr(aval), RSTRING(aval)->len, 1);
++			StringValueCStr(aval), RSTRING_LEN(aval), 1);
+ 	if(ret == 0) {
+ 		return aval;
+ 	} else {
+@@ -430,7 +430,7 @@
+ 	VALUE fobj, aname;
+ {
+ 	int ret;
+-	OpenFile *fptr;
++	rb_io_t *fptr;
+ 	FILE *f;
+ 
+ 	GetOpenFile(fobj, fptr);
+Only in ruby-xattr-0.3.0/ext: xattr.c~
